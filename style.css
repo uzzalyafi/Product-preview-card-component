@@ -1,0 +1,152 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* font family */
+  --ff-Montserrat: "Montserrat", sans-serif;
+  --ff-Fraunces: "Fraunces", serif;
+  /* color */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--ff-Montserrat);
+  background-color: var(--Cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+img {
+  max-width: 100%;
+}
+
+/* Card style */
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+/* card image */
+.card-image {
+  flex-basis: 50%;
+}
+.card-image .mobile {
+  display: none;
+}
+.card-image img {
+  border-radius: 8px 0 0 8px;
+}
+.card-content {
+  flex-basis: 50%;
+}
+/* card content */
+.card-content {
+  background: var(--White);
+  padding: 2rem;
+  display: grid;
+  border-radius: 0 8px 8px 0;
+}
+.card-content h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 4.5px;
+}
+.card-content h1 {
+  color: var(--Very-dark-blue);
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: var(--ff-Fraunces);
+  line-height: 38px;
+}
+.card-content p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+  line-height: 23px;
+}
+.card-content .price {
+  font-size: 2rem;
+  font-family: var(--ff-Fraunces);
+  color: var(--Dark-cyan);
+  font-weight: 700;
+}
+.card-content .price span {
+  font-size: 0.875rem;
+  font-family: var(--ff-Montserrat);
+  margin-left: 1rem;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+}
+/* button style */
+.button {
+  background-color: var(--Dark-cyan);
+  border: none;
+  color: var(--White);
+  font-size: 0.875rem;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.button img {
+  margin-right: 0.6rem;
+}
+.button:hover {
+  background: var(--Very-dark-blue);
+}
+/* footer style */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  /* card image */
+  .card-image .desktop {
+    display: none;
+  }
+  .card-image .mobile {
+    display: block;
+  }
+  .card-image img {
+    border-radius: 12px 12px 0 0;
+  }
+  /* card-content */
+  .card-content {
+    gap: 2rem;
+    border-radius: 0 0 12px 12px;
+  }
+  .card-content h2 {
+    margin-bottom: -1rem;
+  }
+  /* .button */
+  .button {
+    padding: 1rem;
+  }
+}
